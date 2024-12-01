@@ -31,7 +31,7 @@ function animarTextoInsightTrip() {
     if (isNaN(top)) top = 0;
 
     if (scrollY > endPosition) {
-        if (top < 409) {
+        if (top < 300) {
             text.style.top = `${top + 100}px`;
         }
     } else {

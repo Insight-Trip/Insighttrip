@@ -509,7 +509,7 @@ section {
 .container-servico .card img {
     /* TAMANHO */
     height: 100%;
-
+width: 100%;
     /* ORGANIZAÇÃO DOS ELEMENTOS */
     display: block;
     transition: transform 0.5s ease;
@@ -798,4 +798,168 @@ footer {
     /*FONTE*/
     font-family: var(--textos);
     font-size: 18px;
+}
+@media (max-width: 768px){
+  
+    .area-img-inicio .text-cover {
+        top: 80px;
+    }
+    .text-cover.second {
+        z-index: 2;
+    }
+    .area-img-inicio .image-cover {
+        /* TAMANHO */
+        width: 100%;
+        height: 60vh;
+        top: 40px;
+    }
+    #inicio {
+        height: 50vh;
+    }
+    .appear {
+        animation: appear 1s ease;
+        animation-timeline: scroll();
+        animation-range: entry 0 cover 5%;
+    }
+    .container-sobre .box-top-sobre {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    
+    }
+    .container-sobre .box-top-sobre .area-map-image {
+
+        width: 100%;
+    }
+    .container-sobre p {
+        font-size: 20px;
+        width: 90%;
+        text-align: justify;
+    }
+    .container-sobre .area-cards {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .container-como-funciona {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container-como-funciona .area-img-winframe {
+        width: 95%;
+    }
+    .container-como-funciona .area-desc {
+        width: 95%;
+    }
+    .container-como-funciona .area-desc {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container-como-funciona .area-desc .desc {
+        width: 90%;
+        font-size: 20px;
+        text-align: justify;
+        margin-top: 25px;
+    }
+.container-servico .area-cards {
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 40px;
+    padding-left: 40px;
+    font-family: var(--titulos);
+}
+.container-servico .card {
+    height: 100%;
+    width: 50%;
+}
+.container-contato {
+
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+
+
+}
+.container-contato .area-desc-contato {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    width: 90%;
+}
+.container-contato{
+    margin-top: 50px;
+}
+.container-contato .area-desc-contato p {
+    font-size: 20px;
+    width: 95%;
+}
+.container-contato .area-desc-contato h2{
+display: flex;
+align-self: flex-start;
+}
+.container-contato .area-form-contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btn-enviar{
+margin-top: 20px;
+
+}
+footer {
+    /*TAMANHO*/
+    width: 100%;
+    height: 140px;
+    
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*CORES*/
+    background-color: var(--orange-primary);
+}
+.contact-info {
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.mob{
+    display: none;
+}
+}
+@media (max-width: 550px){
+
+
+    .area-img-inicio .text-cover {
+        top: 50px;
+    }
+
+    footer {
+      margin-top: 200px;
+      display: flex;
+      height: 155px;
+    }
 }
