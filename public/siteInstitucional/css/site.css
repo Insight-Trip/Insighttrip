@@ -1,0 +1,801 @@
+/* ====================================================MAPEAMENTO DOS ESTILOS================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Particularmente não gostei nenhum pouco desta fonte */
+
+:root {
+    /* CORES */
+    --blue-primary-bigFont: #BED5E0;
+    --blue-primary: #799FAC;
+    --blue-primary-hover: #4c717d;
+    --orange-primary: #ECA769;
+
+    /* FONTES */
+    --titulos: 'Bebas Neue', sans-serif;
+    --textos: 'Abel', sans-serif;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body {
+    /* ESPAÇAMENTO */
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    scroll-behavior: smooth;
+}
+
+section {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ESPAÇAMENTO */
+    margin-bottom: 30px;
+
+    /* ANIMAÇÃO */
+
+
+}
+
+
+
+/*======================================================ESTILIZAÇÃO NAVBAR====================================================*/
+
+.area-navbar {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    /* ESPAÇAMENTO */
+    margin-bottom: 40px;
+
+    /* ANIMAÇÃO */
+    transition: 0.5s;
+}
+
+.area-navbar .navbar {
+    /* TAMANHO */
+    width: 93%;
+    height: 45px;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+
+    /* CORES */
+    background-color: transparent;
+
+    /* FONTE */
+    font-family: var(--titulos);
+}
+
+.area-navbar .navbar .area-logo p {
+    /* FONTE */
+    font-size: 23px;
+
+    /* CORES */
+    color: var(--blue-primary);
+}
+
+.area-navbar .navbar .area-logo{
+    width: 45px;
+    height: 100%;
+    object-fit: cover;
+
+}
+.img-logo-img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.area-navbar .navbar.second .area-logo p {
+    /* CORES */
+    color: #ffff;
+}
+
+
+.area-navbar .navbar.third .area-logo p {
+    color: #ffff;
+}
+
+/* Estilo para os links da navbar */
+.area-navbar .navbar a {
+    /* FONTE */
+    font-size: 23px;
+    text-decoration: none;
+
+    /* ESPAÇAMENTO */
+    margin: 0 10px;
+
+    /* CORES */
+    color: var(--blue-primary);
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    transition: color 0.5s ease;
+}
+
+.area-navbar .navbar.second a {
+    /* CORES */
+    color: #ffff;
+}
+
+.area-navbar .navbar.third a {
+    color: #ffff;
+}
+
+.area-navbar .navbar a:hover {
+    /* CORES */
+    color: var(--blue-primary-hover);
+}
+
+.menu-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* quando a pagina for scrollada uma pequena sombra se forma abaixo da navbar */
+.shadow {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    background-color: var(--blue-primary);
+}
+
+.shadow.second{
+    background-color: var(--orange-primary);
+}
+
+.shadow .navbar a {
+    color: #ffff;
+}
+
+/*======================================================FIM ESTILIZAÇÃO NAVBAR====================================================*/
+
+.appear {
+    animation: appear 1s ease;
+    animation-timeline: scroll();
+    animation-range: entry 0 cover 30%;
+}
+
+.container-display {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: block;
+}
+
+.container-inicio {
+    /* TAMANHO */
+    height: 600px;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: block;
+    z-index: 1;
+}
+
+.area-img-inicio {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: center;
+}
+
+.area-img-inicio .text-cover {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: absolute;
+    top: 115px;
+    z-index: 0;
+    transform: translateY();
+    transition: top 0.5s ease;
+}
+
+.text-cover.second {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    z-index: 2;
+}
+
+.text-cover.third {
+    z-index: 1;
+}
+
+.area-img-inicio .text-cover path {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    transition: fill 0.5s ease;
+
+    /* CORES */
+    fill: var(--blue-primary-bigFont);
+}
+
+.area-img-inicio .text-cover.second path {
+    /* CORES */
+    fill: #ffff;
+}
+
+.area-img-inicio .text-cover.third path {
+    fill: #ffff;
+}
+
+.area-img-inicio .image-cover {
+    /* TAMANHO */
+    width: 100%;
+    height: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: absolute;
+    top: 170px;
+    transform: translateY();
+    transition: top 0.5s ease, opacity 1s ease-in-out, filter 1s ease-in-out;
+    filter: blur(0);
+    opacity: 1;
+}
+
+.area-img-inicio .background-cover {
+    display: none;
+}
+
+.background-cover.third {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    display: block;
+}
+
+.image-cover.second {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    top: 0;
+}
+
+.image-cover.third {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+
+.area-img-inicio img.fade-out {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    filter: blur(10px);
+    opacity: 0;
+}
+
+.area-img-inicio img.fade-in {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    filter: blur(0);
+    opacity: 1;
+}
+
+#sobre-nos {
+    position: relative;
+    z-index: 4;
+}
+
+.container-sobre {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
+
+    /* CORES */
+    background-color: #ffff;
+
+    /* ESPAÇAMENTO */
+    margin-top: 200px;
+}
+
+.container-sobre .box-top-sobre {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container-sobre .box-top-sobre .area-map-image {
+    /* TAMANHO */
+    width: 50%;
+}
+
+.container-sobre .box-top-sobre .area-map-image img {
+    /* TAMANHO */
+    width: 100%;
+}
+
+.container-sobre p {
+    /* FONTE */
+    font-family: var(--textos);
+    font-size: 25px;
+
+    /* CORES */
+    color: var(--orange-primary);
+
+    /* TAMANHO */
+    width: 32%;
+
+    padding-left: 20px;
+}
+
+.container-sobre .area-cards {
+    /* TAMANHO */
+    width: 50%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-around;
+
+    /* FONTE */
+    font-family: var(--titulos);
+}
+
+.container-sobre .area-cards p {
+    /* FONTE */
+    font-size: 12px;
+
+    /* CORES */
+    color: #fff;
+}
+
+.container-sobre .card {
+    /* TAMANHO */
+    width: 140px;
+    height: 36px;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* CORES */
+    background-color: var(--orange-primary);
+    color: #ffff;
+
+    /* ESPAÇAMENTO */
+    border-radius: 12px;
+}
+
+.container-como-funciona {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-como-funciona .area-img-winframe {
+    /* TAMANHO */
+    width: 50%;
+}
+
+.container-como-funciona .area-img-winframe img {
+    /* TAMANHO */
+    width: 100%;
+}
+
+.container-como-funciona .area-desc {
+    /* TAMANHO */
+    width: 50%;
+}
+
+.container-como-funciona .area-desc .card-desc {
+    /* TAMANHO */
+    width: 30%;
+
+    /* FONTE */
+    font-family: var(--titulos);
+    font-size: 23px;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    text-align: center;
+
+    /* CORES */
+    color: #ffff;
+    background-color: var(--blue-primary-bigFont);
+
+    /* ESPAÇAMENTO */
+    border-radius: 8px;
+
+}
+
+.container-como-funciona .area-desc .desc {
+    /* TAMANHO */
+    width: 80%;
+
+    /* FONTE */
+    font-family: var(--textos);
+    font-size: 25px;
+
+    /* CORES */
+    color: var(--blue-primary);
+}
+
+
+.container-servico {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-servico .area-cards {
+    /* TAMANHO */
+    width: 100%;
+    height: 470px;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-between;
+
+    /* ESPAÇAMENTO */
+    padding-right: 40px;
+    padding-left: 40px;
+
+    /* FONTE */
+    font-family: var(--titulos);
+}
+
+.container-servico .card {
+    /* TAMANHO */
+    height: 100%;
+    width: fit-content;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: relative;
+    overflow: hidden;
+    /* Garantir que o filtro não ultrapasse os limites do card */
+}
+
+.container-servico .card .state {
+    /* FONTE */
+    font-size: 23px;
+
+    /* CORES */
+    color: var(--blue-primary-bigFont);
+
+    /* ESPAÇAMENTO */
+    margin: 0;
+    padding: 0;
+    margin-bottom: -15px;
+}
+
+.container-servico .card .country {
+    /* FONTE */
+    font-size: 40px;
+
+    /* CORES */
+    color: var(--orange-primary);
+
+    /* ESPAÇAMENTO */
+    margin: 0;
+    padding: 0;
+}
+
+.container-servico .card img {
+    /* TAMANHO */
+    height: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.container-servico .card .text-overlay {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+
+    /* CORES */
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container-servico .card::after {
+    /* TAMANHO */
+    width: 100%;
+    height: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    z-index: 1;
+
+    /* CORES */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Filtro escuro */
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    /* Invisível por padrão */
+}
+
+.container-servico .card .hover-map {
+    /* TAMANHO */
+    width: 85%;
+    height: 60%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    position: absolute;
+    top: 77px;
+    left: 20px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    z-index: 3;
+}
+
+.container-servico .card:hover .hover-map {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    opacity: 1;
+}
+
+.container-servico .card:hover::after {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    opacity: 1;
+    /* Filtro escuro visível ao passar o mouse */
+}
+
+.container-servico .card:hover img {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    transform: scale(1.05);
+    /* Aumenta ligeiramente a imagem no hover (opcional) */
+}
+
+#contato {
+    /*TAMANHO*/
+    height: 100vh;
+
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-contato {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.container-contato .area-form-contato {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* TAMANHO */
+    width: 50%;
+}
+
+.container-contato .area-form-contato form {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 73%;
+    height: 100%;
+}
+
+.container-contato .area-form-contato form p {
+    /* FONTE */
+    font-family: var(--titulos);
+    font-size: 23px;
+
+    /* CORES */
+    color: var(--orange-primary);
+}
+
+.container-contato .area-form-contato form .area-input {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
+}
+
+.container-contato .area-form-contato form input {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    border: none;
+    border-bottom: 1px solid var(--orange-primary);
+    background-color: transparent;
+}
+
+.container-contato .area-form-contato form input:focus {
+    outline: none;
+}
+
+.container-contato .area-form-contato form input::placeholder {
+    /* FONTE */
+    font-family: var(--textos);
+    font-size: 18px;
+
+    /* CORES */
+    color: var(--orange-primary);
+}
+
+.container-contato .area-form-contato form textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid var(--orange-primary);
+    background-color: transparent;
+    resize: none;
+    border-radius: 12px;
+}
+
+.container-contato .area-form-contato form textarea::placeholder {
+    font-family: var(--textos);
+    font-size: 18px;
+    color: var(--orange-primary);
+}
+
+.container-contato .area-form-contato form textarea:focus {
+    outline: none;
+}
+
+.container-contato .area-form-contato form button {
+    /* FONTE */
+    font-family: var(--titulos);
+    font-size: 23px;
+
+    /* CORES */
+    color: var(--orange-primary);
+    border: 0px;
+    border-radius: 12px;
+    width: 100px;
+    background-color: var(--orange-primary);
+    color: #ffff;
+
+    /* TAMANHO */
+    width: 100%;
+    height: 35px;
+}
+
+.container-contato .area-desc-contato {
+    /* FONTE */
+    font-family: var(--titulos);
+    font-size: 40px;
+    font-weight: 100;
+
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* CORES */
+    color: var(--orange-primary);
+
+    /* TAMANHO */
+    width: 30%;
+}
+
+.container-contato .area-desc-contato p {
+    /* FONTE */
+    font-family: var(--textos);
+    font-size: 20px;
+    width: 70%;
+
+    /* CORES */
+    color: var(--orange-primary);
+}
+
+
+/*======================================================ESTILIZAÇÃO FOOTER====================================================*/
+
+footer {
+    /*TAMANHO*/
+    width: 100%;
+    height: 200px;
+
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*CORES*/
+    background-color: var(--orange-primary);
+}
+
+.container-footer {
+    /*TAMANHO*/
+    width: 100%;
+    height: 100%;
+
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    color: #ffff;
+}
+
+.social-media {
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.social-media a {
+    /*FONTE*/
+    font-family: var(--titulos);
+    font-size: 23px;
+    margin: 15px;
+
+    /*CORES*/
+    color: #ffff;
+
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    /*CORES*/
+    color: var(--blue-primary);
+
+}
+
+.contact-info {
+    /*ORGANIZAÇÃO DOS ELEMENTOS*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    /*FONTE*/
+    font-family: var(--textos);
+    font-size: 18px;
+}
+
+.copyright {
+    /*FONTE*/
+    font-family: var(--textos);
+    font-size: 18px;
+}

@@ -1,0 +1,179 @@
+:root {
+    --primary-color: #EBA868;
+    --secondary-color: #DC7B1F;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --border-color: #ddd;
+    --hover-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Seção de Edição */
+.edit-section {
+    flex: 2;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group h3 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+input, select {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Seção de Permissões */
+.permissions-section {
+    margin-top: 1rem;
+}
+
+.permissions-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.permission-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: var(--background-color);
+    border-radius: 5px;
+}
+
+.access-level {
+    display: flex;
+    gap: 1rem;
+}
+
+.access-level label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Lista de Funcionários */
+.employees-list {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.list-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.search-input {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+.list-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.employee-item {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.employee-item:hover {
+    background-color: var(--hover-color);
+}
+
+.employee-item.selected {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Botões */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-cancelar, .btn-salvar {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s;
+}
+
+.btn-cancelar {
+    background-color: var(--border-color);
+}
+
+.btn-salvar {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-cancelar:hover, .btn-salvar:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .employees-list {
+        height: 400px;
+    }
+} 

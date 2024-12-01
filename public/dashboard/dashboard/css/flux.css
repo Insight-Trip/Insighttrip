@@ -1,0 +1,435 @@
+body {
+
+    font-family: 'Abel', sans-serif;
+
+    margin: 0;
+
+    display: flex;
+
+}
+
+
+
+.sidebar {
+
+    width: 225px;
+
+    background-color: var(--sidebar-bg);
+
+    padding: 20px;
+
+    height: 93vh;
+
+    box-shadow: 2px 0 5px var(--shadow-light);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    align-items: flex-start;
+
+}
+
+
+
+.sidebar h1 {
+
+    color: #FFA75E;
+
+    font-size: 50px;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    margin-inline: auto;
+
+}
+
+
+
+.nav-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    text-decoration: none;
+
+    color: var(--color-principal-text);
+
+    font-size: 18px;
+
+    padding: 15px 7px;
+
+    width: 142%;
+
+    transition: background-color 0.3s;
+
+}
+
+
+
+.nav-links a:hover {
+
+    background-color: var(--hover-light);
+
+    border-radius: 8px;
+
+}
+
+
+
+.nav-links a i {
+
+    margin-right: 10px;
+
+    font-size: 20px;
+
+}
+
+
+
+.weather-card {
+
+    background-color: var(--background-interface);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 8px var(--shadow-medium);
+
+    width: 85%;
+
+}
+
+
+
+.weather-card p {
+
+    margin: 5px 0;
+
+    font-size: 15px;
+
+    color: var(--text-secondary);
+
+}
+
+
+
+.weather-card .destination {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: var(--dark-blue);
+
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+
+
+.weather-card .button {
+
+    background-color: var(--blue-white-elements);
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    width: 100%;
+
+}
+
+
+
+.weather-card .button:hover {
+
+    background-color: var(--hover-light);
+
+}
+
+
+
+.weather-card .dot {
+
+    color: red;
+
+    font-size: 15px;
+
+    margin-right: 5px;
+
+}
+
+
+
+.folder-structure {
+
+    display: flex;
+
+    align-items: center;
+
+    background-color: var(--background-mapa);
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-top: -90px;
+
+    cursor: pointer;
+
+}
+
+
+
+.folder {
+
+    background-color: var(--purple-elements);
+
+    color: var(--background-interface);
+
+    font-size: 16px;
+
+    padding: 10px 20px;
+
+    border-radius: 10px 10px 0 0;
+
+    box-shadow: 0 -2px 4px var(--shadow-light);
+
+    transition: background-color 0.3s;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+
+.folder:hover {
+
+    background-color: var(--hover-light);
+
+}
+
+
+
+.folder:nth-child(1) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(2) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(3) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(4) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder:nth-child(5) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(6) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(7) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(8) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder:nth-child(9) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(10) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(11) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(12) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder.selected {
+
+    background-color: var(--background-interface);
+
+    color: var(--color-principal-text);
+
+}
+
+
+
+
+
+.tela {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background-color: var(--background-mapa);
+
+    padding: 0px;
+
+}
+
+
+
+.mapa {
+
+    background-color: var(--background-mapa);
+
+    height: 200px;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+}
+
+
+
+.mapa.fullscreen {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    z-index: 10;
+
+    transform: scale(1);
+
+    background-color: var(--background-mapa);
+
+}
+
+
+
+.mapa:hover {
+
+    color: var(--blue-white-elements);
+
+    height: 80vh;
+
+    border: solid 1px var(--gray-elements);
+
+}
+
+
+
+
+
+.graficos {
+
+    background-color: var(--background-interface);
+
+    flex: 1;
+
+    width: 100%;
+
+}
+
+
+
+.titulo {
+
+    font-family: 'Bebas Neue';
+
+    font-weight: 400;
+
+    font-size: 65px;
+
+    color: var(--background-interface);
+
+    margin-left: 250px;
+
+    margin-top: 25px;
+
+    cursor: pointer;
+
+}

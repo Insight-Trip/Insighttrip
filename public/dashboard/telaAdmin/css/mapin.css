@@ -1,0 +1,85 @@
+/* ====================================================MAPEAMENTO DOS ESTILOS================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Particularmente não gostei nenhum pouco desta fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*Está aqui é a fonte padrão do figma, desenvolvi as telas com ela, de qualquer forma, acho ela bonita*/
+
+:root {
+    /* CORES */
+    --blue-primary-bigFont: #BED5E0;
+    --blue-primary: #799FAC;
+    --blue-primary-hover: #4c717d;
+    --orange-primary: #ECA769;
+    --color-principal-text: #202020;
+    --gray-elements: rgba(197, 197, 197, 0.2);
+    --dark-blue: #344775;
+    --dark-blue-elements: rgba(0, 111, 213, 1);
+    --purple-primary-bigFont: rgba(226, 224, 255, 1);
+    --purple-elements: #8979FF;
+    --dark-purple-elements: #37287f;
+    --orange-primary-bigFont: rgba(236, 167, 105, 0.48);
+    --background-interface: #FFFFFF;
+    --blue-focus: #C0E1FF;
+    --card-question-message: rgba(238, 240, 241, 1);
+    --gray-border: rgba(197, 197, 197, 0.5);
+
+    /* FONTES */
+    --titulos: 'Bebas Neue', sans-serif;
+    --textos: 'Abel', sans-serif;
+    --principal: 'Inter', sans-serif;
+
+    --blue-white-elements: #F9FBFC;
+}
+
+[data-theme="dark"] {
+    --blue-primary-bigFont: #1A2A33;
+    --blue-primary: #2C4A5A;
+    --blue-primary-hover: #3A5F73;
+    --orange-primary: #B37A3D;
+    --color-principal-text: #E0E0E0;
+    --gray-elements: rgba(58, 58, 58, 0.2);
+    --dark-blue: #1E2A4A;
+    --dark-blue-elements: rgba(0, 70, 135, 1);
+    --purple-primary-bigFont: rgba(50, 48, 79, 1);
+    --dark-purple-elements: #241B54;
+    --orange-primary-bigFont: rgba(165, 96, 34, 0.48);
+    --background-interface: #121212;
+    --blue-white-elements: #0A0F14;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body {
+    /* ESPAÇAMENTO */
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    scroll-behavior: smooth;
+}
+
+section {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ESPAÇAMENTO */
+    margin-bottom: 30px;
+
+    /* ANIMAÇÃO */
+
+
+}

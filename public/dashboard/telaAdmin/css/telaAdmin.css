@@ -1,0 +1,207 @@
+.container-conteudo{
+    /*Tamanho*/
+    width: 96%;
+    height: 100%;
+    /*fonte*/
+    font-family: var(--principal);
+}
+
+.container-indicadores{
+    /*Tamanho*/
+    width: 100%;
+    height: 20%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.indicador{
+    /*Tamanho*/
+    width: 25%;
+    height: 60%;
+    margin: 0px;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-between;
+    /*Borda*/
+    border-radius: 10px;
+}
+
+.vendas{
+    /*Borda*/
+    border: 1px solid #006FD5;
+}
+
+.marketing{
+    /*Borda*/
+    border: 1px solid #ECA769;
+}
+
+.macroGerencia{
+    /*Borda*/
+    border: 1px solid #372980;
+}
+
+.adicionar{
+    /*Tamanho*/
+    width: 7%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Borda*/
+    border: 1px solid #397364;
+}
+
+.caixa-icone-indicador{
+    /*Tamanho*/
+    width: 28%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-indicador{
+    /*Tamanho*/
+    width: 65%;
+}
+
+.icone-indicador-adicionar{
+    /*Tamanho*/
+    width: 60%;
+    /*Detalhes*/
+    cursor: pointer;
+}
+
+.caixa-texto-indicador{
+    /*Tamanho*/
+    width: 70%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.texto-vendas{
+    /*Cor*/
+    color: #006FD5;
+}
+
+.texto-marketing{
+    /*Cor*/
+    color: #ECA769;
+}
+
+.texto-macroGerencia{
+    /*Cor*/
+    color: #372980;
+}
+
+.quantidade-funcionarios{
+    /*Tamanho*/
+    height: 30%;
+    /*Espaçamento*/
+    margin: 0px;
+    /*Fonte*/
+    font-size: 23px;
+}
+
+.setor{
+    /*Tamanho*/
+    height: 30%;
+    /*Espaçamento*/
+    margin: 0px;
+}
+
+.container-barra-pesquisa{
+    /*Tamanho*/
+    width: 100%;
+    height: 8%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.barra-pesquisa{
+    /*Tamanho*/
+    width: 82%;
+    height: 50%;
+    /*Espaçamento*/
+    padding-left: 10px;
+    /*Borda*/
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.botao-buscar{
+    /*Tamanho*/
+    width: 7%;
+    height: 60%;
+    /*Borda*/
+    border: 1px solid #372980;
+    border-radius: 10px;
+    /*Cor*/
+    background-color: transparent;
+    color: #372980;
+    /*Detalhes*/
+    cursor: pointer;
+}
+
+.lista-funcionarios{
+    /*Tamanho*/
+    width: 100%;
+    height: 70%;
+    /*Espaçamento*/
+    padding-top: 1px;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Detalhes*/
+    overflow-y: scroll;
+}
+
+.container-funcionario{
+    /*Tamanho*/
+    width: 95%;
+    height: 15%;
+    /*Espaçamento*/
+    margin-left: 10px;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-between;
+    /*Borda*/
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.caixa-nome-funcionario{
+    /*Tamanho*/
+    width: 40%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nome-funcionario{
+    /*Tamanho*/
+    width: 60%;
+}
+
+.caixa-alterar-funcionario{
+    /*Tamanho*/
+    width: 20%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botao-icone{
+    /*Detalhes*/
+    cursor: pointer;
+}

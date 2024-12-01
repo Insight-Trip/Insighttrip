@@ -1,0 +1,55 @@
+.container-graphic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.box-graphic {
+    text-align: center;
+    justify-content: center;
+}
+
+.chart {
+    width: 300px;
+    height: 210px;
+    margin: auto;
+    outline: none;
+}
+
+.chartjs-legend .legend-point {
+    width: 5px;
+    height: 5px;
+    border-radius: 90%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Estilo para layout estadual */
+.container-graphic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box-graphic {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+    .container-graphic {
+        grid-template-columns: 1fr;
+    }
+}

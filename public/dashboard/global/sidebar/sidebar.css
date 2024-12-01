@@ -1,0 +1,238 @@
+.sidebar {
+    flex-shrink: 0;
+
+    box-sizing: border-box;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+    position: relative;
+    width: 17vw;
+    height: 100vh;
+
+    background: var(--blue-white-elements);
+    border-right: 1px solid rgba(197, 197, 197, 0.5);
+    transition: width 0.3s ease;
+}
+
+.sidebar.retracted {
+    width: 60px;
+    position: relative;
+    /* Ajuste conforme necessário */
+}
+
+.toggle-btn {
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    /* Garante que o botão fique acima de outros elementos */
+}
+
+.area-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    /* Esconde o conteúdo que ultrapassar as dimensões */
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar.retracted .area-logo {
+    width: 0;
+    opacity: 0;
+}
+
+.sidebar.retracted .logo-icon,
+.sidebar.retracted .logo-text {
+    display: none;
+}
+
+.sidebar.retracted .card-navbar p {
+    opacity: 0;
+    transform: translateX(-20px);
+
+}
+
+.card-navbar {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar.retracted .card-navbar {
+    justify-content: center;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.sidebar.retracted .box-sidebar-next-event {
+    display: none;
+}
+
+.sidebar .area-logo {
+    display: flex;
+    font-family: var(--titulos);
+    width: 100%;
+    color: var(--orange-primary);
+    justify-content: space-around;
+}
+
+.sidebar .area-logo p {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.menu-sidebar {
+    position: relative;
+    font-family: var(--principal);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    /* Reduzido de 100% para 95% */
+}
+
+.menu-sidebar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    /* Ajuste conforme necessário */
+    background-color: var(--gray-elements);
+    border-radius: 6px;
+    transition: top 0.3s ease;
+    z-index: 0;
+}
+
+.menu-sidebar .card-navbar {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    width: 95%;
+
+    gap: 5px;
+    padding-left: 8px;
+
+    border-radius: 6px;
+
+    margin-bottom: 5px;
+
+    color: var(--color-principal-text);
+}
+
+.menu-sidebar .card-navbar.activate {
+    background-color: transparent;
+    color: var(--color-principal-text);
+}
+
+@keyframes moveSelector {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Classes para posicionar o seletor */
+.menu-sidebar.select-dashboard::before {
+    top: 5px;
+}
+
+.menu-sidebar.select-funcionarios::before {
+    top: 64px;
+}
+
+/* Ajuste conforme necessário */
+.menu-sidebar.select-ia::before {
+    top: 117px;
+}
+
+/* Ajuste conforme necessário */
+.menu-sidebar.select-mapa::before {
+    top: 173px;
+}
+
+/* Ajuste conforme necessário */
+.menu-sidebar.select-buscar-destinos::before {
+    top: 229px;
+}
+
+/* Ajuste conforme necessário */
+
+.menu-sidebar::before {
+    animation: moveSelector 0.3s ease-out;
+}
+
+.box-sidebar-next-event {
+    margin-top: auto;
+    font-family: var(--principal);
+    background-color: var(--background-interface);
+    width: 100%;
+    height: 175px;
+    border: solid 2px var(--gray-elements);
+    border-radius: 16px;
+
+}
+
+.box-sidebar-next-event .area-desc-next-event {
+    width: 95%;
+    border-bottom: solid 1px var(--gray-elements);
+    padding-left: 12px;
+    color: var(--color-principal-text);
+}
+
+.area-desc-next-event .desc {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.area-desc-next-event .tittle {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.box-sidebar-next-event .area-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-sidebar-next-event .area-event p {
+    font-family: var(--titulos);
+    color: var(--dark-blue);
+    font-size: 25px;
+    margin: 12px;
+}
+
+.box-sidebar-next-event button {
+    width: 85%;
+    border: solid 2px var(--gray-elements);
+    background-color: transparent;
+    border-radius: 12px;
+    color: var(--color-principal-text);
+    cursor: pointer;
+}

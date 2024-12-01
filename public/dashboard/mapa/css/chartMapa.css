@@ -1,0 +1,39 @@
+body {
+    display: flex;
+}
+
+.display-mapa {
+    flex-grow: 1;
+    background-color: var(--blue-primary-bigFont);
+    display: flex;
+    justify-content: center;
+}
+
+.show-mapa {
+    width: 100%;
+    height: 100%;
+}
+
+
+.box-voltar-dash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    position: fixed;
+    bottom: 4%;
+    right: 2%; 
+    width: 200px;
+    height: auto;
+
+    font-family: var(--principal);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    cursor: pointer;
+
+    color: var(--color-principal-text);
+
+}

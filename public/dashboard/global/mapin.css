@@ -1,0 +1,646 @@
+/* ====================================================MAPEAMENTO DOS ESTILOS================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Particularmente não gostei nenhum pouco desta fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/*Está aqui é a fonte padrão do figma, desenvolvi as telas com ela, de qualquer forma, acho ela bonita*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* CORES */
+    --blue-primary-bigFont: #BED5E0;
+    --blue-primary: #799FAC;
+    --blue-primary-hover: #4c717d;
+    --orange-primary: #ECA769;
+    --color-principal-text: #202020;
+    --gray-elements: rgba(197, 197, 197, 0.2);
+    --dark-blue: #344775;
+    --dark-blue-elements: rgba(0, 111, 213, 1);
+    --purple-primary-bigFont: rgba(226, 224, 255, 1);
+    --purple-elements: #8979FF;
+    --dark-purple-elements: #37287f;
+    --orange-primary-bigFont: rgba(236, 167, 105, 0.48);
+    --background-interface: #FFFFFF;
+    --blue-focus: #C0E1FF;
+    --card-question-message: rgba(238, 240, 241, 1);
+    --gray-border: rgba(197, 197, 197, 0.5);
+    --blue-white-elements: #F9FBFC;
+
+    /* Novas variáveis necessárias */
+    --sidebar-bg: #f7f7f7;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    --hover-light: #e0e0e0;
+    --text-secondary: #666;
+    --background-mapa: #d6e6ef;
+
+    /* FONTES */
+    --titulos: 'Bebas Neue', sans-serif;
+    --textos: 'Abel', sans-serif;
+    --principal: 'Inter', sans-serif;
+}
+
+[data-theme="dark"] {
+    --blue-primary-bigFont: #1A2A33;
+    --blue-primary: #2C4A5A;
+    --blue-primary-hover: #3A5F73;
+    --orange-primary: #B37A3D;
+    --color-principal-text: #E0E0E0;
+    --gray-elements: rgba(58, 58, 58, 0.2);
+    --dark-blue: #1E2A4A;
+    --dark-blue-elements: rgba(0, 70, 135, 1);
+    --purple-primary-bigFont: rgba(50, 48, 79, 1);
+    --dark-purple-elements: #241B54;
+    --orange-primary-bigFont: rgba(165, 96, 34, 0.48);
+    --background-interface: #121212;
+    --blue-white-elements: #0A0F14;
+
+    /* Novas variáveis no tema escuro */
+    --sidebar-bg: #1A1A1A;
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    --shadow-medium: rgba(0, 0, 0, 0.25);
+    --hover-light: #2A2A2A;
+    --text-secondary: #A0A0A0;
+    --background-mapa: #2C3E50;
+}
+
+[data-theme="frio"] {
+    --blue-primary-bigFont: #A7C6ED;
+    /* Azul claro para o título */
+    --blue-primary: #B0E0E6;
+    /* Azul nevoeiro, suave e claro */
+    --blue-primary-hover: #87CEFA;
+    /* Azul céu para hover */
+    --orange-primary: #FFCC66;
+    /* Laranja suave para contrastar */
+    --color-principal-text: #202020;
+    /* Texto em branco */
+    --gray-elements: rgba(200, 200, 200, 0.2);
+    /* Cinza muito claro */
+    --dark-blue: #4682B4;
+    /* Azul aço para elementos escuros */
+    --dark-blue-elements: rgba(0, 100, 150, 1);
+    --purple-primary-bigFont: rgba(75, 75, 125, 1);
+    /* Roxo suave */
+    --dark-purple-elements: #3B3F4E;
+    /* Roxo escuro */
+    --orange-primary-bigFont: rgba(255, 215, 0, 0.48);
+    /* Laranja suave */
+    --background-interface: #F0F8FF;
+    /* Azul muito claro, quase branco */
+    --blue-white-elements: #E0FFFF;
+    /* Azul claro para elementos brancos */
+
+    /* Novas variáveis no tema Frio */
+    --sidebar-bg: #E6F7FF;
+    /* Fundo lateral em azul bem claro */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    /* Sombra média */
+    --hover-light: #B0E0E6;
+    /* Azul suave para hover */
+    --text-secondary: #666;
+    /* Texto secundário em cinza escuro */
+    --background-mapa: #F0F8FF;
+    /* Fundo do mapa em azul claro */
+}
+
+[data-theme="sao-paulo"] {
+    --blue-primary-bigFont: #4A90E2;
+    /* Azul mais claro e moderno */
+    --blue-primary: #007BFF;
+    /* Azul vibrante */
+    --blue-primary-hover: #0056B3;
+    /* Azul escuro para hover */
+    --orange-primary: #FFD700;
+    /* Amarelo forte */
+    --color-principal-text: #FFFFFF;
+    /* Texto em branco */
+    --gray-elements: rgba(128, 128, 128, 0.2);
+    /* Cinza claro */
+    --dark-blue: #1C3F94;
+    /* Azul mais escuro */
+    --dark-blue-elements: rgba(0, 100, 150, 1);
+    --purple-primary-bigFont: rgba(75, 75, 125, 1);
+    /* Roxo suave */
+    --dark-purple-elements: #3B3F4E;
+    /* Roxo escuro */
+    --orange-primary-bigFont: rgba(255, 215, 0, 0.48);
+    /* Amarelo suave */
+    --background-interface: #2F2F2F;
+    /* Fundo escuro */
+    --blue-white-elements: #1F1F1F;
+    /* Azul escuro para elementos brancos */
+
+    /* Novas variáveis no tema São Paulo */
+    --sidebar-bg: #2B2B2B;
+    /* Fundo lateral escuro */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.25);
+    /* Sombra média */
+    --hover-light: #3B3B3B;
+    /* Hover leve */
+    --text-secondary: #B0B0B0;
+    /* Texto secundário claro */
+    --background-mapa: #3E3E3E;
+    /* Fundo do mapa escuro */
+}
+
+[data-theme="amazonas"] {
+    --blue-primary-bigFont: #007B5F;
+    /* Verde escuro para o título */
+    --blue-primary: #009688;
+    /* Verde-teal */
+    --blue-primary-hover: #00897B;
+    /* Verde-teal escuro para hover */
+    --orange-primary: #FFA07A;
+    /* Laranja claro */
+    --color-principal-text: #202020;
+    /* Texto preto */
+    --gray-elements: rgba(128, 128, 128, 0.2);
+    /* Cinza claro */
+    --dark-blue: #004D40;
+    /* Verde mais escuro */
+    --dark-blue-elements: rgba(0, 100, 150, 1);
+    --purple-primary-bigFont: rgba(75, 75, 125, 1);
+    /* Roxo suave */
+    --dark-purple-elements: #3B3F4E;
+    /* Roxo escuro */
+    --orange-primary-bigFont: rgba(255, 160, 122, 0.48);
+    /* Laranja suave */
+    --background-interface: #E8F5E9;
+    /* Verde claro, quase branco */
+    --blue-white-elements: #F1F8E9;
+    /* Verde bem claro para elementos brancos */
+
+    /* Novas variáveis no tema Amazonas */
+    --sidebar-bg: #F1F8E9;
+    /* Fundo lateral em verde claro */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    /* Sombra média */
+    --hover-light: #C8E6C9;
+    /* Verde claro para hover */
+    --text-secondary: #555;
+    /* Texto secundário em cinza escuro */
+    --background-mapa: #C8E6C9;
+    /* Fundo do mapa em verde claro */
+}
+
+[data-theme="tropical"] {
+    --blue-primary-bigFont: #FFB74D;
+    /* Laranja suave, reminiscentes do pôr do sol */
+    --blue-primary: #FF9800;
+    /* Laranja vibrante, como um sol brilhante */
+    --blue-primary-hover: #F57C00;
+    /* Laranja mais escuro para hover */
+    --orange-primary: #4DB6AC;
+    /* Verde água, representando o mar */
+    --color-principal-text: #FFFFFF;
+    /* Texto em branco para contraste */
+    --gray-elements: rgba(128, 128, 128, 0.2);
+    /* Cinza muito claro */
+    --dark-blue: #00796B;
+    /* Verde escuro como as palmeiras */
+    --dark-blue-elements: rgba(0, 100, 150, 1);
+    --purple-primary-bigFont: rgba(75, 75, 125, 1);
+    /* Roxo suave */
+    --dark-purple-elements: #3B3F4E;
+    /* Roxo escuro */
+    --orange-primary-bigFont: rgba(255, 215, 0, 0.48);
+    /* Laranja suave */
+    --background-interface: #FFFDE7;
+    /* Amarelo muito claro, como areia */
+    --blue-white-elements: #FF9800;
+    /* Azul bem claro para elementos brancos */
+
+    /* Novas variáveis no tema Tropical */
+    --sidebar-bg: #FFE0B2;
+    /* Fundo lateral em amarelo claro */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    /* Sombra média */
+    --hover-light: #FFAB40;
+    /* Laranja suave para hover */
+    --text-secondary: #666;
+    /* Texto secundário em cinza escuro */
+    --background-mapa: #FFE0B2;
+    /* Fundo do mapa em amarelo claro */
+}
+
+[data-theme="profissional"] {
+    --blue-primary-bigFont: #333333;
+    /* Cinza escuro para títulos */
+    --blue-primary: #444444;
+    /* Cinza médio para elementos principais */
+    --blue-primary-hover: #555555;
+    /* Cinza claro para hover */
+    --orange-primary: #888888;
+    /* Cinza claro para contrastar */
+    --color-principal-text: #202020;
+    /* Texto em branco para contraste */
+    --gray-elements: rgba(200, 200, 200, 0.5);
+    /* Cinza médio para elementos adicionais */
+    --dark-blue: #222222;
+    /* Cinza muito escuro para fundo */
+    --dark-blue-elements: rgba(0, 0, 0, 1);
+    /* Preto para elementos de destaque */
+    --purple-primary-bigFont: #222222;
+
+    --purple-elements: #3B3F4E;
+    /* Roxo suave para textos secundários */
+    --dark-purple-elements: #3B3F4E;
+    /* Roxo escuro, caso necessário */
+    --orange-primary-bigFont: rgba(255, 255, 255, 0.48);
+    /* Branco suave para fundo de título */
+    --background-interface: #F8F8F8;
+    /* Fundo muito claro, quase branco */
+    --blue-white-elements: #FFFFFF;
+    /* Elementos brancos para clareza */
+
+    /* Novas variáveis no tema Profissional */
+    --sidebar-bg: #EEEEEE;
+    /* Fundo lateral em cinza muito claro */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve, sutil */
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    /* Sombra média para elementos destacados */
+    --hover-light: #CCCCCC;
+    /* Cinza claro para hover */
+    --text-secondary: #777777;
+    /* Texto secundário em cinza escuro */
+    --background-mapa: #F0F0F0;
+    /* Fundo do mapa em cinza muito claro */
+}
+
+[data-theme="github"] {
+    --blue-primary-bigFont: #c9d1d9;
+    /* Cinza claro para títulos */
+    --blue-primary: #58a6ff;
+    /* Azul suave para links e botões */
+    --blue-primary-hover: #1f6feb;
+    /* Azul mais escuro para hover */
+    --orange-primary: #fafafa;
+    /* Verde GitHub para botões de confirmação */
+    --color-principal-text: #f0f6fc;
+    /* Branco suave para texto principal */
+    --gray-elements: rgba(110, 118, 129, 0.2);
+    /* Cinza claro para bordas */
+    --dark-blue: #161b22;
+    /* Preto do fundo principal */
+    --dark-blue-elements: #0d1117;
+    /* Preto profundo para elementos principais */
+    --purple-primary-bigFont: rgba(13, 17, 23, 0.5);
+    /* Sombras escuras e sutis */
+    --dark-purple-elements: #21262d;
+    /* Cinza escuro para contornos */
+    --orange-primary-bigFont: rgba(63, 185, 80, 0.3);
+    /* Verde suave para fundos de confirmação */
+    --background-interface: #0d1117;
+    /* Fundo preto para a interface principal */
+    --blue-white-elements: #161b22;
+    /* Preto para caixas e componentes */
+    
+
+
+    /* Novas variáveis no tema GitHub */
+
+    --sidebar-bg: #0d1117;
+    /* Preto profundo para sidebar */
+    --shadow-light: rgba(255, 255, 255, 0.1);
+    /* Sombra leve para contraste */
+    --shadow-medium: rgba(255, 255, 255, 0.15);
+    /* Sombra média para destaque */
+    --hover-light: #21262d;
+    /* Cinza escuro para hover */
+    --text-secondary: #8b949e;
+    /* Cinza claro para texto secundário */
+    --background-mapa: #161b22;
+    /* Fundo escuro para áreas como o mapa */
+}
+
+[data-theme="youtube"] {
+    --blue-primary-bigFont: #FFFFFF;
+    /* Branco para títulos e textos principais */
+    --blue-primary: #FF0000;
+    /* Vermelho YouTube para botões principais */
+    --blue-primary-hover: #D70000;
+    /* Vermelho escuro para hover em botões */
+    --orange-primary: #FF0000;
+    /* Vermelho para ações principais e destaques */
+    --color-principal-text: #FFFFFF;
+    /* Branco para texto principal */
+    --gray-elements: rgba(255, 255, 255, 0.1);
+    /* Cinza claro para bordas e divisores */
+    --dark-blue: #282828;
+    /* Cinza-escuro YouTube para o fundo */
+    --dark-blue-elements: #383838;
+    /* Cinza ainda mais escuro para containers e elementos */
+    --purple-primary-bigFont: rgba(255, 255, 255, 0.8);
+    /* Branco semi-transparente para destaques suaves */
+    --dark-purple-elements: #282828;
+    /* Fundo para menus e barras laterais */
+    --orange-primary-bigFont: rgba(255, 0, 0, 0.3);
+    /* Vermelho suave para fundos de alerta */
+    --background-interface: #282828;
+    /* Fundo escuro para a interface principal */
+    --blue-white-elements: #383838;
+    /* Cinza-escuro para caixas e componentes */
+
+    /* Novas variáveis no tema YouTube */
+    --sidebar-bg: #282828;
+    /* Fundo escuro da barra lateral */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    /* Sombra leve para contraste */
+    --shadow-medium: rgba(0, 0, 0, 0.35);
+    /* Sombra média para destacar elementos */
+    --hover-light: #383838;
+    /* Cinza escuro para hover em elementos */
+    --text-secondary: #909090;
+    /* Cinza para texto secundário */
+    --background-mapa: #282828;
+    /* Fundo para áreas como mapas */
+}
+
+[data-theme="daltonico"] {
+    --blue-primary-bigFont: #FFD700;
+    /* Amarelo para títulos principais */
+    --blue-primary: #0077CC;
+    /* Azul claro para botões e links principais */
+    --blue-primary-hover: #005999;
+    /* Azul mais escuro para hover */
+    --orange-primary: #FFC107;
+    /* Amarelo suave para destaques */
+    --color-principal-text: #000000;
+    /* Preto para texto principal */
+    --gray-elements: rgba(0, 0, 0, 0.15);
+    /* Preto transparente para bordas e linhas */
+    --dark-blue: #FFFFFF;
+    /* Fundo branco para máxima legibilidade */
+    --dark-blue-elements: #E5E5E5;
+    /* Cinza claro para containers */
+    --purple-primary-bigFont: rgba(0, 119, 204, 0.8);
+    /* Azul claro para destaque de texto */
+    --dark-purple-elements: #333333;
+    /* Cinza escuro para contornos e bordas */
+    --orange-primary-bigFont: rgba(255, 193, 7, 0.3);
+    /* Amarelo suave para fundos de alerta */
+    --background-interface: #F5F5F5;
+    /* Fundo claro para a interface principal */
+    --blue-white-elements: #E5E5E5;
+    /* Cinza claro para caixas e componentes */
+
+    /* Novas variáveis no tema Daltonico */
+    --sidebar-bg: #FFFFFF;
+    /* Fundo branco da barra lateral */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    /* Sombra leve para contraste */
+    --shadow-medium: rgba(0, 0, 0, 0.25);
+    /* Sombra média para destacar elementos */
+    --hover-light: #CCCCCC;
+    /* Cinza claro para hover */
+    --text-secondary: #333333;
+    /* Cinza escuro para texto secundário */
+    --background-mapa: #F5F5F5;
+    /* Fundo claro para áreas como mapas */
+}
+
+[data-theme="notion"] {
+    --blue-primary-bigFont: #2f3437;
+    /* Cinza escuro para títulos */
+    --blue-primary: #373b3e;
+    /* Cinza neutro para elementos principais */
+    --blue-primary-hover: #44484b;
+    /* Cinza para hover */
+    --orange-primary: #6a737d;
+    /* Cinza médio para botões e destaque */
+    --color-principal-text: #2f3437;
+    /* Texto em preto para o máximo contraste */
+    --gray-elements: rgba(36, 39, 41, 0.1);
+    /* Cinza claro para linhas e divisórias */
+    --dark-blue: #1e2022;
+    /* Cinza muito escuro para áreas de foco */
+    --dark-blue-elements: rgba(55, 59, 62, 1);
+    /* Cinza escuro para headers */
+    --purple-primary-bigFont: rgba(36, 39, 41, 0.05);
+    /* Sombras sutis */
+    --dark-purple-elements: #373b3e;
+    /* Cinza médio para bordas */
+    --orange-primary-bigFont: rgba(106, 115, 125, 0.2);
+    /* Cinza suave para fundo de caixas */
+    --background-interface: #ffffff;
+    /* Fundo branco, ideal para leitura */
+    --blue-white-elements: #ffffff;
+    /* Branco para elementos principais */
+
+    /* Novas variáveis no tema Notion */
+    --sidebar-bg: #f7f7f8;
+    /* Fundo em cinza muito claro para sidebar */
+    --shadow-light: rgba(0, 0, 0, 0.05);
+    /* Sombra leve para caixas e botões */
+    --shadow-medium: rgba(0, 0, 0, 0.1);
+    /* Sombra média para elementos de destaque */
+    --hover-light: #f0f0f0;
+    /* Cinza claro para hover */
+    --text-secondary: #5c6064;
+    /* Cinza médio para textos secundários */
+    --background-mapa: #e9eaea;
+    /* Fundo claro para destacar áreas como mapas */
+}
+
+[data-theme="yana"] {
+    --blue-primary-bigFont: #424769;
+    /* Azul médio */
+    --blue-primary: #2d3250;
+    /* Azul escuro */
+    --blue-primary-hover: #676f9d;
+    /* Azul claro */
+    --orange-primary: #f9b17a;
+    /* Laranja */
+    --color-principal-text: #ffffff;
+    /* Branco */
+    --gray-elements: rgba(66, 71, 105, 0.2);
+    /* Azul médio com transparência */
+    --dark-blue: #2d3250;
+    /* Azul escuro */
+    --dark-blue-elements: #424769;
+    /* Azul médio */
+    --purple-primary-bigFont: rgba(66, 71, 105, 1);
+    /* Azul médio */
+    --dark-purple-elements: #2d3250;
+    /* Azul escuro */
+    --orange-primary-bigFont: rgba(249, 177, 122, 0.48);
+    /* Laranja com transparência */
+    --background-interface: #121212;
+    /* Preto para o fundo */
+    --blue-white-elements: #0A0F14;
+    /* Fundo escuro */
+
+    /* Novas variáveis no tema escuro */
+    --sidebar-bg: #1A1A1A;
+    /* Cor de fundo da sidebar */
+    --shadow-light: rgba(0, 0, 0, 0.2);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.25);
+    /* Sombra média */
+    --hover-light: #2A2A2A;
+    /* Cor para hover */
+    --text-secondary: #A0A0A0;
+    /* Cor de texto secundário */
+    --background-mapa: #2C3E50;
+    /* Fundo para o mapa */
+
+    /* FONTES */
+        --titulos: 'Bebas Neue', sans-serif;
+        --textos: 'Abel', sans-serif;
+        --principal: 'Relaway', sans-serif;
+}
+
+[data-theme="cactus"] {
+    /* CORES */
+    --blue-primary-bigFont: #4D774E;
+    /* Verde médio */
+    --blue-primary: #9DC88D;
+    /* Verde claro */
+    --blue-primary-hover: #164A41;
+    /* Verde escuro */
+    --orange-primary: #F1B24A;
+    /* Laranja */
+    --color-principal-text: #FFFFFF;
+    /* Branco */
+    --gray-elements: rgba(157, 200, 141, 0.2);
+    /* Verde claro com transparência */
+    --dark-blue: #164A41;
+    /* Verde escuro */
+    --dark-blue-elements: #4D774E;
+    /* Verde médio */
+    --purple-primary-bigFont: rgba(157, 200, 141, 1);
+    /* Verde claro */
+    --purple-elements: #9DC88D;
+    /* Verde claro */
+    --dark-purple-elements: #4D774E;
+    /* Verde médio */
+    --orange-primary-bigFont: rgba(241, 178, 74, 0.48);
+    /* Laranja com transparência */
+    --background-interface: #164A41;
+    /* Fundo verde escuro */
+    --blue-focus: #9DC88D;
+    /* Verde claro para foco */
+    --card-question-message: rgba(255, 255, 255, 0.9);
+    /* Fundo branco com leve transparência */
+    --gray-border: rgba(77, 119, 78, 0.5);
+    /* Verde médio com transparência */
+    --blue-white-elements: #FFFFFF;
+    /* Branco */
+
+    /* Novas variáveis necessárias */
+    --sidebar-bg: #4D774E;
+    /* Fundo da sidebar em verde médio */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    /* Sombra média */
+    --hover-light: #9DC88D;
+    /* Cor de hover em verde claro */
+    --text-secondary: #A0A0A0;
+    /* Texto secundário em cinza claro */
+    --background-mapa: #9DC88D;;
+    /* Fundo do mapa em verde escuro */
+
+    --blue-white-elements: #4D774E;
+}
+
+[data-theme="lavender-to"] {
+    /* CORES */
+    --blue-primary-bigFont: #4F4162;
+    /* Roxo escuro */
+    --blue-primary: #B5BCB3;
+    /* Cinza esverdeado */
+    --blue-primary-hover: #C179B9;
+    /* Rosa escuro */
+    --orange-primary: #F2BAE3;
+    /* Rosa claro */
+    --color-principal-text: #4F4162;
+    /* Roxo escuro para o texto principal */
+    --gray-elements: rgba(181, 188, 179, 0.2);
+    /* Cinza esverdeado com transparência */
+    --dark-blue: #4F4162;
+    /* Roxo escuro */
+    --dark-blue-elements: #B5BCB3;
+    /* Cinza esverdeado */
+    --purple-primary-bigFont: rgba(241, 186, 227, 1);
+    /* Rosa claro */
+    --purple-elements: #C179B9;
+    /* Rosa escuro */
+    --dark-purple-elements: #4F4162;
+    /* Roxo escuro */
+    --orange-primary-bigFont: rgba(242, 186, 227, 0.48);
+    /* Rosa claro com transparência */
+    --background-interface: #F5E6E8;
+    /* Fundo do tema em rosa claro */
+    --blue-focus: #C179B9;
+    /* Rosa escuro para foco */
+    --card-question-message: rgba(255, 255, 255, 0.9);
+    /* Fundo branco com leve transparência */
+    --gray-border: rgba(181, 188, 179, 0.5);
+    /* Cinza esverdeado com transparência */
+    --blue-white-elements: #FFFFFF;
+    /* Branco */
+
+    /* Novas variáveis necessárias */
+    --sidebar-bg: #B5BCB3;
+    /* Fundo da sidebar em cinza esverdeado */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    --shadow-medium: rgba(0, 0, 0, 0.12);
+    /* Sombra média */
+    --hover-light: #C179B9;
+    /* Cor de hover em rosa escuro */
+    --text-secondary: #666;
+    /* Texto secundário em cinza */
+    --background-mapa: #4F4162;
+    /* Fundo do mapa em roxo escuro */
+}
+
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body {
+    /* ESPAÇAMENTO */
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    /* ORGANIZAÇÃO DOS ELEMENTOS */
+    scroll-behavior: smooth;
+}
+
+section {
+    /* TAMANHO */
+    width: 100%;
+
+    /* ESPAÇAMENTO */
+    margin-bottom: 30px;
+
+    /* ANIMAÇÃO */
+
+
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="../siteInstitucional/imagens/logo/imagemLogoFrio.png">
+    <title>Entrar</title>
+</head>
+<body>
+    <div class="container-content">
+        <aside class="container-foto"></aside>
+        <aside class="container-login">
+            <section class="caixa-login">
+                <img src="../siteInstitucional/imagens/logo/imagemLogoFrio.png" alt="logo do projeto" class="logo">
+                <div class="caixa-inputs">
+                    <input id="input_email" placeholder="Email" class="input">
+                    <input id="input_senha" type="password" placeholder="Senha" class="input">
+                </div>
+                <div class="caixa-botao">
+                    <button onclick="login()" class="botao-entrar">ENTRAR</button>
+                    <p>Não tem conta? <a href="./cadastro.html"><strong class="link-cadastro">Cadastre-se</strong></a></p>
+                </div>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>
+
+<script>
+    function login() {
+        const emailVar = input_email.value
+        const senhaVar = input_senha.value
+
+        if (emailVar == "" || senhaVar == "") {
+        alert(`
+        Preencha todos os campos para realizar o login!`)
+        return false;
+    }
+    fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            emailServer: emailVar,
+            senhaServer: senhaVar,
+        })
+    }).then(function (resposta) {
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log('Usuario:', json);
+                sessionStorage.EMAIL_USUARIO = json.email;
+                sessionStorage.NOME_USUARIO = json.nome;
+                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.IS_ADM = json.isAdm
+            });
+
+            window.location = "../dashboard/dashboard/dashboard.html";
+
+        } else {
+
+            alert(`As credenciais estão incorretas, tente novamente!`)
+
+            resposta.text().then(texto => {
+                console.error(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+    }
+</script>

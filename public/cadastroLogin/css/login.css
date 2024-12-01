@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Particularmente não gostei nenhum pouco desta fonte */
+
+
+:root{
+    /*Fontes*/
+    --titulos: 'Bebas Neue', sans-serif;
+    --textos: 'Abel', sans-serif;
+}
+
+*{
+    /*Espaçamento*/
+    margin: 0px;
+    padding: 0px;
+    /*Detalhes*/
+    overflow: hidden;
+}
+
+.container-content{
+    /*Tamanho*/
+    width: 100vw;
+    height: 100vh;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--textos);
+}
+
+.container-foto{
+    /*Tamanho*/
+    width: 45%;
+    height: 100%;
+    /*Detalhes*/
+    background-image: url("../../siteInstitucional/imagens/imagemLogin.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container-login{
+    /*Tamanho*/
+    width: 55%;
+    height: 100%;
+    /*Organiazação de elementos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-login{
+    /*Tamanho*/
+    width: 70%;
+    height: 70%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    /*Tamanho*/
+    width: 45%;
+}
+
+.caixa-inputs{
+    /*Tamanho*/
+    width: 100%;
+    height: 25%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input{
+    /*Tamanho*/
+    height: 35%;
+    /*Espaçamento*/
+    padding-left: 10px;
+    /*borda*/
+    border: 2px solid #B5D0DB;
+    border-radius: 10px;
+    font-family: var(--textos);
+}
+
+.caixa-botao{
+    /*Tamanho*/
+    width: 100%;
+    height: 25%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+    /*Cor*/
+    color: #B5D0DB;
+}
+
+.botao-entrar{
+    /*Tamanho*/
+    width: 100%;
+    height: 35%;
+    /*Borda*/
+    border: none;
+    border-radius: 10px;
+    /*Cor*/
+    background-color: #B5D0DB;
+    color: #fff;
+    /*Detalhes*/
+    cursor: pointer;
+}
+
+.link-cadastro{
+    /*Texto*/
+    font-family: var(--titulos);
+
+    text-decoration:none;
+    color: #638EA0;
+    cursor: pointer;
+    /*Detalhes*/
+}
+
+p{
+    font-family: var(--titulos);
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+input{
+    font-family: var(--textos);
+}
+
+input::placeholder{
+    font-family: var(--textos);
+    color: #B5D0DB;
+}
+
+@media only screen and (max-width: 600px) {
+    *{
+        /*Fonte*/
+        font-size: 20px;
+    }
+
+    .container-content{
+        /*Organização de elementos filhos*/
+        display: block;
+    }
+
+    .container-foto{
+        /*Comportamento*/
+        display: none;
+    }
+
+    .container-login{
+        /*Tamanho*/
+        width: 100%;
+    }
+
+    .caixa-login{
+        /*Tamanho*/
+        width: 90%;
+        height: 75%;
+    }
+    
+    .logo{
+        /*Tamanho*/
+        width: 60%;
+    }
+
+    .caixa-botao{
+        /*Organização de elementos filhos*/
+        gap: 10px;
+    }
+}

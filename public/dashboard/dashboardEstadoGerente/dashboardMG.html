@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h1>INSIGHT TRIP</h1>
+
+        <div class="nav-links">
+            <a href="#"><i class="fas fa-th-large"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-users"></i> Funcionários</a>
+            <a href="#"><i class="fas fa-circle-notch"></i> I.A</a>
+            <a href="#"><i class="fas fa-map"></i> Mapa</a>
+            <a href="#"><i class="fas fa-search"></i> Buscar destino</a>
+        </div>
+
+        <div class="weather-card">
+            <p>Possibilidade para próximo clima</p>
+            <p><span class="dot">●</span>Viagem litorânea</p>
+            <p class="destination">05/12 - RIO DE JANEIRO</p>
+            <button class="button">conversar com I.A</button>
+            <button class="button">compreender demanda</button>
+        </div>
+    </div>
+
+    <div class="tela">
+
+        <div class="mapa">
+            <p class="titulo">Clique aqui para acessar o mapa</p>
+        </div>
+
+        <div class="folder-structure">
+            <a class="folder" href="../dashboard/dashboard.html">Brasil</a>
+            <a class="folder" href="dashboardSP.html">São Paulo</a>
+            <a class="folder" href="dashboardRJ.html">Rio de Janeiro</a>
+            <a class="folder selected">Minas Gerais</a>
+            <a class="folder" href="dashboardES.html">Espírito Santo</a>
+            <a class="folder" href="dashboardPR.html">Paraná</a>
+            <a class="folder" href="dashboardSC.html">Santa Catarina</a>
+            <a class="folder" href="dashboardRS.html">Rio Grande do Sul</a>
+            <a class="folder" href="dashboardAM.html">Amazonas</a>
+            <a class="folder" href="dashboardTO.html">Tocantins</a>
+            <a class="folder" href="dashboardAP.html">Amapá</a>
+            <a class="folder" href="dashboardAC.html">Acre</a>
+        </div>        
+
+        <div class="graficos">
+
+            <div class="switch-year">
+                <div class="filter-field">Selecione o filtro de ano:</div>
+                <select class="select-filter" id="year">
+                    <option value="2024">2024</option>
+                    <option value="2024">2023</option>
+                    <option value="2024">2022</option>
+                    <option value="2024">2021</option>
+                    <option value="2024">2020</option>
+                    <option value="2024">2019</option>
+                    <option value="2024">2018</option>
+                    <option value="2024">2017</option>
+                    <option value="2024">2016</option>
+                    <option value="2024">2015</option>
+                    <option value="2024">2014</option>
+                    <option value="2024">2013</option>
+                    <option value="2024">2012</option>
+                    <option value="2024">2011</option>
+                    <option value="2024">2010</option>
+                    <option value="2024">2009</option>
+                    <option value="2024">2008</option>
+                    <option value="2024">2007</option>
+                    <option value="2024">2006</option>
+                    <option value="2024">2005</option>
+                    <option value="2024">2004</option>
+                    <option value="2024">2003</option>
+                    <option value="2024">2002</option>
+                    <option value="2024">2001</option>
+                    <option value="2024">2000</option>
+                </select>
+            </div>
+
+            <div class="container-graphic">
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="cidadesVisitadas" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="cidadesSeguras" width="400" height="210"></canvas>
+                    </div>
+                </div>
+
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="cidadesPerigosas" width="200" height="120"></canvas>
+                    </div>
+                </div>
+
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="segurasVisitadas" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="proximosEventos" width="300" height="210"></canvas>
+                    </div>
+                </div>
+
+                <div class="box-graphic">
+                    <div class="chart">
+                        <canvas id="estacao" width="180" height="60"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+
+
+</body>
+
+</html>

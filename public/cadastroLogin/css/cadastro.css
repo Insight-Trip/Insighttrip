@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+/* Particularmente não gostei nenhum pouco desta fonte */
+
+
+:root{
+    /*Fontes*/
+    --titulos: 'Bebas Neue', sans-serif;
+    --textos: 'Abel', sans-serif;
+}
+
+* {
+    /*Espaçamento*/
+    padding: 0px;
+    margin: 0px;
+    /*Detalhes*/
+    overflow: hidden;
+}
+
+.container-content{
+    /*Tamanho*/
+    width: 100vw;
+    height: 100vh;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-cadastro{
+    /*Tamanho*/
+    width: 55%;
+    height: 100%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-cadastro{
+    /*Tamanho*/
+    width: 70%;
+    height: 80%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /*Detalhes*/
+    overflow: visible;
+}
+
+.logo {
+    /*Tamanho*/
+    width: 45%;
+}
+
+p{
+    font-family: var(--titulos);
+}
+
+.caixa-inputs{
+    /*Tamanho*/
+    width: 100%;
+    height: 40%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*Detalhes*/
+    overflow: visible;
+}
+
+.input{
+    /*Tamanho*/
+    height: 15%;
+    /*Espaçamento*/
+    padding-left: 7px;
+    /*Borda*/
+    border: 2px solid #EBA868;
+    border-radius: 10px;
+}
+
+.caixa-botao{
+    /*Tamanho*/
+    width: 100%;
+    height: 20%;
+    /*Organização de elementos filhos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    margin-top: 7px;
+    /*Cor*/
+    color: #EBA868;
+}
+
+.botao-cadastrar{
+    /*Tamanho*/
+    width: 100%;
+    height: 35%;
+    /*Borda*/
+    border: none;
+    border-radius: 10px;
+    /*Cor*/
+    background-color: #EBA868;
+    color: #fff;
+    /*Detalhes*/
+    cursor: pointer;
+}
+
+.link-login{
+    /*Texto*/
+    text-decoration: underline;
+    color: #DC7B1F;
+    /*Detalhes*/
+    cursor: pointer;
+}
+
+.container-foto{
+    /*Tamanho*/
+    width: 45%;
+    height: 100%;
+    /*Detalhes*/
+    background-image: url("../../siteInstitucional/imagens/imagemCadastro.png");
+    background-size: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .container-content{
+        /*Organização de elementos filhos*/
+        display: block;
+    }
+
+    .container-cadastro{
+        /*Tamanho*/
+        width: 100%;
+    }
+
+    .caixa-cadastro{
+        /*Tamanho*/
+        width: 90%;
+        height: 80%;
+    }
+
+    .logo{
+        /*Tamanho*/
+        width: 60%;
+    }
+
+    .caixa-botao{
+        /*Organização de elementos filhos*/
+        gap: 10px;
+    }
+
+    .container-foto{
+        /*Comportamento*/
+        display: none;
+    }
+}
+

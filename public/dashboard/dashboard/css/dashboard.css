@@ -1,0 +1,315 @@
+.switch-year {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 8px;
+    position: relative;
+    width: 76px;
+    height: 52px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    margin-left: 1180px;
+    margin-top: -53px;
+    /* font-family: (--blue-primary-bigFont); */
+    font-size: 16px;
+    border-style: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.filter-field {
+    /* font-family: (--principal); */
+    color: #FFA75E;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: #FFA75E;
+    border-radius: 8px;
+    border: 1px;
+}
+
+.select-filter {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    width: 65px;
+    height: 30px;
+    margin-left: 170px;
+    margin-top: 13px;
+    font-size: 15px;
+    color: #FFA75E;
+    border-color: #FFA75E;
+    border-radius: 10px;
+}
+
+.button-filter {
+    visibility: hidden;
+}
+
+.button-filter-active {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 25px;
+    background-color: #FFA75E;
+    font-family: 'Abel';
+    cursor: pointer;
+    margin-top: 350px;
+}
+
+.box-graphic {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 0px;
+    width: 850px;
+    height: 388px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    margin-left: -10px;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+    justify-content: center;
+}
+
+.box-graphic2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 0px;
+    width: 305px;
+    height: 170px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    margin-left: -5px;
+    margin-top: 15px;
+    background-color: #FFFFFF;
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.principal-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.chart {
+    justify-content: center;
+    align-content: center;
+}
+
+.container-graphic {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+}
+
+.area-cards-resume {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.card-resume {
+    /* font-family: (--principal); */
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 15px;
+    height: 29px;
+    width: 115%;
+    gap: 12px;
+    max-width: 410px;
+    border: 1px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    font-size: 16px;
+    justify-content: center;
+}
+
+.card-resume.events {
+    color: var(--dark-blue-elements);
+    border-color: var(--blue-primary-bigFont);
+}
+
+.card-resume.main {
+    color: var(--dark-purple-elements);
+    border-color: var(--purple-primary-bigFont);
+}
+
+.card-resume.demand {
+    color: var(--orange-primary);
+    border-color: var(--orange-primary);
+}
+
+.card-resume .area-icon-card {
+    border-radius: 50%;
+    width: 24%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: (--blue-primary-bigFont); */
+    margin: -25px;
+}
+
+.card-resume.events .area-icon-card {
+    /* background-color: (--blue-primary-bigFont); */
+}
+
+.card-resume.main .area-icon-card {
+    /* background-color: (--purple-primary-bigFont); */
+}
+
+.card-resume.demand .area-icon-card {
+    /* background-color: (--orange-primary-bigFont); */
+}
+
+.area-filter,
+.dropdown-filter {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.filter-field {
+    margin-bottom: 15px;
+}
+
+.filter-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: (--color-principal-text);
+}
+
+.filter-field select {
+    width: 100%; /* Expande a largura */
+    padding: 8px;
+    border: 1px solid (--gray-elements);
+    border-radius: 5px;
+    background-color: (--blue-white-elements);
+    color: (--color-principal-text);
+    font-size: 14px;
+}
+
+.filter-field select:focus {
+    outline: none;
+    border-color: (--blue-primary);
+}
+
+.filter-field:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-filter.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+    width: 300px; 
+    background: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    margin-left: 923px;
+    height: 380px;
+    position: absolute;
+}
+
+.folder-structure {
+    display: flex;
+    align-items: center;
+    width: auto;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.folder-carousel {
+    display: flex;
+    transition: transform 0.3s ease;
+    overflow: auto;
+    height: 100%;
+}
+
+.folder {
+    flex: 0 0 auto;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 60px; /* Largura mínima para as siglas */
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+.folder:hover {
+    background-color: #e0e0e0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.carousel-button:hover {
+    background: #f0f0f0;
+}
+
+.carousel-button.prev {
+    left: 5px;
+}
+
+.carousel-button.next {
+    right: 5px;
+}
+
+.folder.selected {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Garante que o container pai não tenha overflow */
+.tela {
+    overflow-x: hidden;
+    width: 100%;
+}
+
