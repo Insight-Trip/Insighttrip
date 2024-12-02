@@ -16,7 +16,7 @@ function cadastrarAdm(nome, cpf, email, senha, telefone, fkArea) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO Funcionario (nome, cpf, email, senha, telefone, fkAdministrador, fkArea) VALUES ('${nome}', ${cpf} '${email}', '${senha}', '${telefone}', null,'${fkArea}');
+        INSERT INTO Funcionario (nome, cpf, email, senha, telefone, Setor, fkArea) VALUES ('${nome}', ${cpf} '${email}', '${senha}', '${telefone}', null,'${fkArea}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -28,7 +28,7 @@ function cadastrarFuncionario(nome, cpf, email, senha, telefone,fkAdm, setor) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO Funcionario (nome, cpf, email, senha, telefone,Setor, fkAdministrador) VALUES ('${nome}', '${cpf}', '${email}', MD5('${senha}'), '${telefone}', ${fkAdm}, '${setor}');
+        INSERT INTO Funcionario (nome, cpf, email, senha, telefone,Setor, fkAdministrador) VALUES ('${nome}', '${cpf}', '${email}', MD5('${senha}'), '${telefone}', '${setor}', ${fkAdm});
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

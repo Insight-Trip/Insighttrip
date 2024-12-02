@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="../dashboardEstadoGerente/css/dashboard.css">
     <link rel="stylesheet" href="../dashboardEstadoGerente/css/sidebar.css">
     <link rel="stylesheet" href="../dashboardEstadoGerente/css/charts.css">
+    <link rel="stylesheet" href="css/charts.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/flux.css">
+    <link rel="stylesheet" href="../global/mapin.css">
 </head>
 
 <body>
@@ -20,9 +24,6 @@
         <div class="nav-links">
             <a href="#"><i class="fas fa-th-large"></i> Dashboard</a>
             <a href="#"><i class="fas fa-users"></i> Funcionários</a>
-            <a href="#"><i class="fas fa-circle-notch"></i> I.A</a>
-            <a href="#"><i class="fas fa-map"></i> Mapa</a>
-            <a href="#"><i class="fas fa-search"></i> Buscar destino</a>
         </div>
 
         <div class="weather-card">
@@ -77,74 +78,31 @@
 
         <div class="graficos">
 
-            <div class="switch-year">
-                <div class="filter-field">Selecione o filtro de ano:</div>
-                <select class="select-filter" id="year">
-                    <option value="2024">2024</option>
-                    <option value="2024">2023</option>
-                    <option value="2024">2022</option>
-                    <option value="2024">2021</option>
-                    <option value="2024">2020</option>
-                    <option value="2024">2019</option>
-                    <option value="2024">2018</option>
-                    <option value="2024">2017</option>
-                    <option value="2024">2016</option>
-                    <option value="2024">2015</option>
-                    <option value="2024">2014</option>
-                    <option value="2024">2013</option>
-                    <option value="2024">2012</option>
-                    <option value="2024">2011</option>
-                    <option value="2024">2010</option>
-                    <option value="2024">2009</option>
-                    <option value="2024">2008</option>
-                    <option value="2024">2007</option>
-                    <option value="2024">2006</option>
-                    <option value="2024">2005</option>
-                    <option value="2024">2004</option>
-                    <option value="2024">2003</option>
-                    <option value="2024">2002</option>
-                    <option value="2024">2001</option>
-                    <option value="2024">2000</option>
-                </select>
-            </div>
-
             <div class="container-graphic">
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="cidadesVisitadas" width="400" height="250"></canvas>
+                <div class="principal-box">
+                    <div class="box-graphic">
+                        <div class="area-canvas">
+                            <canvas id="EstadosDestaque" width="800" height="400" class="chart"></canvas>
+                        </div>
                     </div>
                 </div>
 
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="cidadesSeguras" width="400" height="210"></canvas>
+                <div class="right-box">
+                    <div class="box-graphic2">
+                        <div class="chart">
+                            <canvas id="cidadesSeguras" width="400" height="250"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="box-graphic2">
+                        <div class="chart">
+                            <canvas id="estacao" width="180" height="60"></canvas>
+                        </div>
                     </div>
                 </div>
 
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="cidadesPerigosas" width="200" height="120"></canvas>
-                    </div>
-                </div>
-
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="segurasVisitadas" width="400" height="250"></canvas>
-                    </div>
-                </div>
-
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="proximosEventos" width="300" height="210"></canvas>
-                    </div>
-                </div>
-
-                <div class="box-graphic">
-                    <div class="chart">
-                        <canvas id="estacao" width="180" height="60"></canvas>
-                    </div>
-                </div>
             </div>
+
 
         </div>
 

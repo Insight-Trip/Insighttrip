@@ -75,6 +75,11 @@ function constructUrlDashboard({
         user: user
     };
 
+    sessionStorage.setItem('contexto', JSON.stringify(contexto));
+    console.log("Session Storage", sessionStorage.getItem('contexto'))
+
+
+
     return fetch(url.toString(), {
         method: 'POST',
         headers: {

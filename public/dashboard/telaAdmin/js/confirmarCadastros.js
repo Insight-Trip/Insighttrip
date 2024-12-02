@@ -1,4 +1,3 @@
-
 const listaFuncionarios = JSON.parse(localStorage.getItem("funcionarios"));
 console.log(listaFuncionarios)
 
@@ -73,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const btnCad = document.getElementById('btnSave')
 
 function cadastrar() {
-
     listaFuncionarios.forEach(funcionario => {
         fetch("/../usuarios/cadastrar", {
             method: "POST",
@@ -85,7 +83,7 @@ function cadastrar() {
             .then(resposta => {
                 if (resposta.ok) {
                     alert("Funcionário cadastrado com sucesso!");
-                    window.location.href = "telaAdmin.html";
+                    window.location.href = "adicionarFuncionario.html";
                 } else {
                     throw new Error("Erro ao cadastrar funcionário");
                 }
@@ -94,11 +92,9 @@ function cadastrar() {
                 console.error(erro);
                 alert("Erro ao cadastrar funcionário");
             });
-
     })
 
     listaFuncionarios = [];
-
 }
 
-btnCad.addEventListener('click', cadastrar())
+btnCad.addEventListener('click', cadastrar)
