@@ -3,7 +3,16 @@ const listaFuncionariosContainer = document.querySelector('.lista-funcionarios')
 // Nova função para gerar cards
 function gerarCards(funcionarios, container) {
     container.innerHTML = "";
+    let funcVenda = 0;
+    let funcAdmin = 0;
+
     funcionarios.forEach(funcionario => {
+        if (funcionario.area == "Vendedor") {
+            funcVenda++
+        }
+        if (funcionario.area == "Administrador") {
+            funcAdmin++
+        }
         const containerFuncionario = document.createElement('section');
         containerFuncionario.className = 'container-funcionario';
         
@@ -21,6 +30,12 @@ function gerarCards(funcionarios, container) {
         
         container.appendChild(containerFuncionario);
     });
+
+    let totalFunc = funcionarios.length
+
+    totalFunctotal.innerHTML = `${totalFunc} Funcionários`
+    totalFuncVenda.innerHTML = `${funcVenda} Funcionários`
+    totalFuncAdmin.innerHTML = `${funcAdmin} Funcionários`
 }
 
 // Função filtrarFuncionarios refatorada
