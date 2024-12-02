@@ -4,7 +4,7 @@ const EstadosDestaque = document.getElementById('EstadosDestaque');
 // ... código anterior ...
 
 // Remove o objeto parametrosTeste fixo e cria uma função para construí-lo
-function construirParametros(estado) {  
+function construirParametros(estado) {
 
 
     const periodoClimatico = document.getElementById('periodo-climatico').value;
@@ -13,7 +13,7 @@ function construirParametros(estado) {
     const dataFim = document.getElementById('data-fim').value;
     const origem = document.getElementById('origem').value;
     const estadoConst = estado;
-    
+
     // Redireciona para a dashboard apropriada
     if (estadoConst) {
         // Salva o estado selecionado para uso na próxima página
@@ -21,7 +21,7 @@ function construirParametros(estado) {
         window.location.href = 'dashboardEstado.html';
         return; // Interrompe a execução da função
     }
-    
+
     return {
         ibge: estadoConst || undefined,
         clima: periodoClimatico !== 'proximo-semestre' ? periodoClimatico : undefined,
@@ -36,10 +36,10 @@ function construirParametros(estado) {
 }
 
 // Adiciona o evento de click no botão de filtrar
-document.querySelector('.button-filter-active').addEventListener('click', function() {
+document.querySelector('.button-filter-active').addEventListener('click', function () {
     const parametrosTeste = construirParametros();
     console.log("Parâmetros construídos:", parametrosTeste);
-    
+
     // Chama a função para construir a dashboard com os novos parâmetros
     constructUrlDashboard(parametrosTeste)
         .then(() => {
@@ -91,17 +91,17 @@ function constructUrlDashboard({
         .then(dados => {
             console.log("Tipo dos dados:", typeof dados);
             console.log("Dados recebidos:", dados);
-            
+
             // Verifica se dados é um objeto e não um array
             if (!Array.isArray(dados)) {
                 // Se for um objeto, converte para array se possível
                 dados = Object.values(dados);
             }
-            
+
             dados.forEach(tupla => {
                 console.log("Tupla individual:", tupla);
             });
-            
+
             construirGraficos(contexto, dados);
             return dados;
         })
@@ -167,23 +167,23 @@ function construirGraficos(contexto, dados) {
 
         if (graficoBarrasEstadosDemandaSeguranca && dados.length > 0) {
             // Processando dados para o gráfico demanda segurança
-            const estados = []
-            const totalViagens = []
-            const totalCrimes = []
+            const estados = [];
+            const totalViagens = [];
+            const totalCrimes = [];
 
-            console.log("Estrutura", dados)
+            // Corrigindo o caminho para acessar os dados
+            const dadosEstado = dados[1][0].resultado.dados_estado;
 
-            dados[1].forEach(tupla =>{
-                console.log("Tupla para extração:", tupla)
-                estados.push(tupla.categoria)
-                totalViagens.push(tupla.total_viagens);
-                totalCrimes.push(tupla.total_crimes)
-            })
+            dadosEstado.forEach(tupla => {
+                console.log("Tupla para extração:", tupla);
+                estados.push(tupla.nome_estado); // Nome do estado
+                totalViagens.push(tupla.porcentagem_viagens); // % de viagens
+                totalCrimes.push(tupla.porcentagem_crimes); // % de crimes
+            });
 
-
-            console.log(estados)
-            console.log(totalCrimes)
-            console.log(totalViagens)
+            console.log("Estados:", estados);
+            console.log("Total de Viagens:", totalViagens);
+            console.log("Total de Crimes:", totalCrimes);
 
             graficoEstadosDestaque = new Chart(EstadosDestaque, {
                 type: 'bar',
@@ -257,18 +257,37 @@ function construirGraficos(contexto, dados) {
             alert("Sem dados para demanda e segurança!")
         }
 
-        if (graficoBarrasLateraisDemandaEstrangeira) {
+        if (graficoBarrasLateraisDemandaEstrangeira && dados.length > 0) {
             const cidadesSeguras = document.getElementById('cidadesSeguras');
+        
+            // Extraindo os dados de países estrangeiros
+            const topPaises = dados[1][0].resultado.top_paises_estrangeiros;
+        
+            // Preparando os arrays para o gráfico
+            const labels = [];
+            const data = [];
+            const backgroundColors = [];
+            const borderColors = [];
+        
+            // Populando os dados
+            topPaises.forEach(pais => {
+                labels.push(pais.pais);
+                data.push(pais.total_voos);
+                backgroundColors.push('#8BE4F0'); // Cor de fundo
+                borderColors.push('#0085EA'); // Cor da borda
+            });
+        
+            // Criando o gráfico
             graficoCidadesSeguras = new Chart(cidadesSeguras, {
                 type: 'bar',
                 data: {
-                    labels: ['Estados Unidos (EUA)', 'Chile', 'Argentina'],
+                    labels: labels,
                     datasets: [{
                         label: 'Maior Tendência Estrangeira',
-                        data: [80, 50, 30, 59, 27],
+                        data: data,
                         borderWidth: 1,
-                        backgroundColor: ['#8BE4F0'],
-                        borderColor: ['#0085EA']
+                        backgroundColor: backgroundColors,
+                        borderColor: borderColors
                     }]
                 },
                 options: {
@@ -276,7 +295,6 @@ function construirGraficos(contexto, dados) {
                     scales: {
                         x: {
                             beginAtZero: true,
-                            max: 100,
                             ticks: {
                                 font: {
                                     family: 'Abel',
@@ -286,7 +304,6 @@ function construirGraficos(contexto, dados) {
                         },
                         y: {
                             beginAtZero: true,
-                            max: 100,
                             ticks: {
                                 font: { 
                                     family: 'Abel',
@@ -324,28 +341,36 @@ function construirGraficos(contexto, dados) {
                 }
             });
         }
+        
 
-        if (graficoPizzaDemandaEventos) {
+        if (graficoPizzaDemandaEventos && dados.length > 0) {
             const estacao = document.getElementById('estacao');
+        
+            // Extraindo os dados de viagens por estação
+            const viagensPorEstacao = dados[1][0].resultado.total_viagens_por_estacao;
+        
+            // Preparando os arrays para o gráfico
+            const labels = [];
+            const data = [];
+            const backgroundColors = ['#EB9191', '#8BE4F0', '#EBE591', '#b2e2ca'];
+            const borderColors = ['#EB1E1A', '#0085EA', '#EBC201', '#0B4900'];
+        
+            // Populando os arrays
+            viagensPorEstacao.forEach((item, index) => {
+                labels.push(item.estacao);
+                data.push(item.totalViagens);
+            });
+        
+            // Criando o gráfico
             graficoEstacao = new Chart(estacao, {
                 type: 'pie',
                 data: {
-                    labels: ['Estacão 1', 'Estacão 2', 'Estacão 3', 'Estacão 4'],
+                    labels: labels,
                     datasets: [{
                         label: 'Viagens por Estação do Ano',
-                        data: [100, 200, 300, 400],
-                        backgroundColor: [
-                            '#EB9191',
-                            '#8BE4F0',
-                            '#EBE591',
-                            '#b2e2ca'
-                        ],
-                        borderColor: [
-                            '#EB1E1A',
-                            '#0085EA',
-                            '#EBC201',
-                            '#0B4900'
-                        ],
+                        data: data,
+                        backgroundColor: backgroundColors.slice(0, labels.length),
+                        borderColor: borderColors.slice(0, labels.length),
                         borderWidth: 1
                     }]
                 },
@@ -376,6 +401,7 @@ function construirGraficos(contexto, dados) {
                 }
             });
         }
+        
 
     }
 

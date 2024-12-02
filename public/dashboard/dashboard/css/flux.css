@@ -326,6 +326,134 @@ body {
 
 
 
+.folder:nth-child(13) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(14) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(15) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(16) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder:nth-child(17) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(18) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(19) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(20) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder:nth-child(21) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(22) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(23) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(24) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
+.folder:nth-child(25) {
+
+    background-color: var(--blue-primary);
+
+}
+
+
+
+.folder:nth-child(26) {
+
+    background-color: var(--purple-elements);
+
+}
+
+
+
+.folder:nth-child(27) {
+
+    background-color: var(--orange-primary);
+
+}
+
+
+
+.folder:nth-child(28) {
+
+    background-color: var(--dark-blue-elements);
+
+}
+
+
+
 .folder.selected {
 
     background-color: var(--background-interface);
@@ -432,4 +560,32 @@ body {
 
     cursor: pointer;
 
+}
+
+
+
+.folder-carousel::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.folder-carousel::-webkit-scrollbar-track {
+    background: var(--background-interface);
+    border-radius: 4px;
+}
+
+.folder-carousel::-webkit-scrollbar-thumb {
+    background: var(--dark-blue);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.folder-carousel::-webkit-scrollbar-thumb:hover {
+    background: var(--orange-primary);
+}
+
+/* Para Firefox */
+.folder-carousel {
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange-primary) var(--background-interface);
 }

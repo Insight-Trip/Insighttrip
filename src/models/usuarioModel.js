@@ -3,7 +3,7 @@ var database = require("../database/config")
 function autenticar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucaoSql = `
-        SELECT idFuncionario, nome, email, fkAdministrador FROM Funcionario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT idFuncionario, nome, email, fkAdministrador FROM Funcionario WHERE email = '${email}' AND senha = MD5('${senha}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -22,13 +22,13 @@ function cadastrarAdm(nome, cpf, email, senha, telefone, fkArea) {
     return database.executar(instrucaoSql);
 }
 
-function cadastrarFuncionario(nome, cpf, email, senha, telefone,fkAdm, fkArea) {
+function cadastrarFuncionario(nome, cpf, email, senha, telefone,fkAdm, setor) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
 
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        INSERT INTO Funcionario (nome, cpf, email, senha, telefone, fkAdministrador, fkArea) VALUES ('${nome}', '${cpf}', '${email}', MD5('${senha}'), '${telefone}', ${fkAdm}, ${fkArea});
+        INSERT INTO Funcionario (nome, cpf, email, senha, telefone,Setor, fkAdministrador) VALUES ('${nome}', '${cpf}', '${email}', MD5('${senha}'), '${telefone}', ${fkAdm}, '${setor}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -36,9 +36,8 @@ function cadastrarFuncionario(nome, cpf, email, senha, telefone,fkAdm, fkArea) {
 
 
 function listarFuncionarios() {
-    var instrucaoSql = `SELECT funcionario.nome, area.nome AS area, funcionario.email, funcionario.telefone 
-FROM funcionario 
-JOIN area ON funcionario.fkArea = area.idArea 
+    var instrucaoSql = `SELECT funcionario.nome, Setor AS area, funcionario.email, funcionario.telefone 
+FROM funcionario; 
 `
     console.log("Executando a instrução SQL: \n", instrucaoSql);
 
