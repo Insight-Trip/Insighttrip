@@ -5,8 +5,6 @@ const EstadosDestaque = document.getElementById('EstadosDestaque');
 
 // Remove o objeto parametrosTeste fixo e cria uma função para construí-lo
 function construirParametros(estado) {
-
-
     const periodoClimatico = document.getElementById('periodo-climatico').value;
     const eventosSazonais = document.getElementById('eventos-sazonais').value;
     const dataInicio = document.getElementById('data-inicio').value;
@@ -22,7 +20,7 @@ function construirParametros(estado) {
         return; // Interrompe a execução da função
     }
 
-    return {
+    const parametros = {
         ibge: estadoConst || undefined,
         clima: periodoClimatico !== 'proximo-semestre' ? periodoClimatico : undefined,
         evento: eventosSazonais !== 'proximo-semestre' ? eventosSazonais : undefined,
@@ -33,25 +31,36 @@ function construirParametros(estado) {
         origem: origem || undefined,
         user: "gerente"
     };
-}
-
-// Adiciona o evento de click no botão de filtrar
-document.querySelector('.button-filter-active').addEventListener('click', function () {
-    const parametrosTeste = construirParametros();
-    console.log("Parâmetros construídos:", parametrosTeste);
 
     // Chama a função para construir a dashboard com os novos parâmetros
-    constructUrlDashboard(parametrosTeste)
-        .then(() => {
-            // Fecha o dropdown após aplicar o filtro
-            document.querySelector('.area-filter').classList.remove('show');
-            document.querySelector('.dropdown-filter').classList.remove('show');
-        })
-        .catch(error => {
-            console.error("Erro ao atualizar dashboard:", error);
-            alert("Erro ao atualizar os dados. Por favor, tente novamente.");
+    constructUrlDashboard(parametros);
+}
+
+// Função para adicionar o event listener ao botão de filtro, se ele existir
+function setupFilterButton() {
+    const filterButton = document.querySelector('.button-filter-active');
+    if (filterButton) {
+        filterButton.addEventListener('click', function () {
+            const parametrosTeste = construirParametros();
+            console.log("Parâmetros construídos:", parametrosTeste);
+
+            // Chama a função para construir a dashboard com os novos parâmetros
+            constructUrlDashboard(parametrosTeste)
+                .then(() => {
+                    // Fecha o dropdown após aplicar o filtro
+                    document.querySelector('.area-filter').classList.remove('show');
+                    document.querySelector('.dropdown-filter').classList.remove('show');
+                })
+                .catch(error => {
+                    console.error("Erro ao atualizar dashboard:", error);
+                    alert("Erro ao atualizar os dados. Por favor, tente novamente.");
+                });
         });
-});
+    }
+}
+
+// Chama a função para configurar o botão de filtro
+setupFilterButton();
 
 function constructUrlDashboard({
     ibge,
