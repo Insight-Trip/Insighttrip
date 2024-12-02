@@ -176,8 +176,10 @@ function construirGraficos(contexto, dados) {
             const totalViagens = [];
             const totalCrimes = [];
 
+
+            console.log("Estrutura dados", dados)
             // Corrigindo o caminho para acessar os dados
-            const dadosEstado = dados[1][0].resultado.dados_estado;
+            const dadosEstado = dados[0].resultado.dados_estado;
 
             dadosEstado.forEach(tupla => {
                 console.log("Tupla para extração:", tupla);
@@ -265,8 +267,8 @@ function construirGraficos(contexto, dados) {
         if (graficoBarrasLateraisDemandaEstrangeira && dados.length > 0) {
             const cidadesSeguras = document.getElementById('cidadesSeguras');
         
-            // Extraindo os dados de países estrangeiros
-            const topPaises = dados[1][0].resultado.top_paises_estrangeiros;
+            // Extraindo os dados de países estrangeirosx'
+            const topPaises = dados[0].resultado.top_paises_estrangeiros;
         
             // Preparando os arrays para o gráfico
             const labels = [];
@@ -352,7 +354,7 @@ function construirGraficos(contexto, dados) {
             const estacao = document.getElementById('estacao');
         
             // Extraindo os dados de viagens por estação
-            const viagensPorEstacao = dados[1][0].resultado.total_viagens_por_estacao;
+            const viagensPorEstacao = dados[0].resultado.total_viagens_por_estacao;
         
             // Preparando os arrays para o gráfico
             const labels = [];
