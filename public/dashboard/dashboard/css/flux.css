@@ -486,7 +486,7 @@ body {
 
     background-color: var(--background-mapa);
 
-    height: 200px;
+    height: 100px;
 
     cursor: pointer;
 
@@ -510,7 +510,6 @@ body {
 
     z-index: 10;
 
-    transform: scale(1);
 
     background-color: var(--background-mapa);
 
@@ -521,8 +520,6 @@ body {
 .mapa:hover {
 
     color: var(--blue-white-elements);
-
-    height: 80vh;
 
     border: solid 1px var(--gray-elements);
 

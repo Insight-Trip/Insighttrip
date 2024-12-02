@@ -40,7 +40,3 @@ function updateSelectedState() {
 
 // Atualiza estado selecionado quando a página carrega
 document.addEventListener('DOMContentLoaded', updateSelectedState);
-
-mapAcess.addEventListener('click', () => {
-    window.location.href = "../mapa/mapaData.html";
-});

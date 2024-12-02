@@ -55,8 +55,8 @@
 
         <div class="box-sidebar-next-event">
             <div class="area-desc-next-event">
-                <p class="desc">Possibilidade para proximo clima</p>
-                <p class="tittle">Viagem litorania</p>
+                <p class="desc">Possibilidade para próximo clima</p>
+                <p class="tittle">Viagem litôrania</p>
             </div>
             <div class="area-event">
                 <p>05/12 - RIO DE JANEIRO</p>
@@ -76,7 +76,7 @@
                     stroke-linejoin="round" />
             </svg>
 
-            voltar a dashboard
+            Voltar para a dashboard
         </div>
     </div>
 </body>
@@ -133,8 +133,7 @@
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                user: contexto.user,
-                evento : contexto.evento
+                contexto
             })
         })
         .then(response => response.json())

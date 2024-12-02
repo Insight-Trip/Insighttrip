@@ -73,25 +73,24 @@ const btnCad = document.getElementById('btnSave')
 
 function cadastrar() {
     listaFuncionarios.forEach(funcionario => {
-        fetch("/../usuarios/cadastrar", {
+        fetch("/dashboard/buscarDados", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(funcionario)
-        })
-            .then(resposta => {
-                if (resposta.ok) {
-                    alert("Funcionário cadastrado com sucesso!");
-                    window.location.href = "adicionarFuncionario.html";
-                } else {
-                    throw new Error("Erro ao cadastrar funcionário");
-                }
+            body: JSON.stringify({
+                user: "gerente",
+                evento: "carnaval" // ou o evento que você deseja buscar
             })
-            .catch(erro => {
-                console.error(erro);
-                alert("Erro ao cadastrar funcionário");
-            });
+        })
+        .then(response => response.json())
+        .then(dados => {
+            console.log("Dados recebidos:", dados);
+            // Processar os dados aqui
+        })
+        .catch(erro => {
+            console.error("Erro na requisição:", erro);
+        });
     })
 
     listaFuncionarios = [];
