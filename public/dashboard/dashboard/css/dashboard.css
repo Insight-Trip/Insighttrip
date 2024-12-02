@@ -67,7 +67,7 @@
     background-color: #FFA75E;
     font-family: 'Abel';
     cursor: pointer;
-    margin-top: 350px;
+    margin-top: 80px;
 }
 
 .box-graphic {
@@ -237,7 +237,7 @@
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
     border-radius: 12px;
     margin-left: 923px;
-    height: 380px;
+    height: 100px;
     position: absolute;
 }
 

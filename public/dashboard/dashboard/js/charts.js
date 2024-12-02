@@ -5,11 +5,11 @@ const EstadosDestaque = document.getElementById('EstadosDestaque');
 
 // Remove o objeto parametrosTeste fixo e cria uma função para construí-lo
 function construirParametros(estado) {
-    const periodoClimatico = document.getElementById('periodo-climatico').value;
+    const periodoClimatico = null;
     const eventosSazonais = document.getElementById('eventos-sazonais').value;
-    const dataInicio = document.getElementById('data-inicio').value;
-    const dataFim = document.getElementById('data-fim').value;
-    const origem = document.getElementById('origem').value;
+    const dataInicio = null;
+    const dataFim = null;
+    const origem = null;
     const estadoConst = estado;
 
     // Redireciona para a dashboard apropriada

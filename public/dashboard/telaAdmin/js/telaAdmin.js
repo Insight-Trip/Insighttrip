@@ -33,9 +33,26 @@ function gerarCards(funcionarios, container) {
 
     let totalFunc = funcionarios.length
 
-    totalFunctotal.innerHTML = `${totalFunc} Funcionários`
-    totalFuncVenda.innerHTML = `${funcVenda} Funcionários`
-    totalFuncAdmin.innerHTML = `${funcAdmin} Funcionários`
+    if (totalFunc > 1) {
+        totalFunctotal.innerHTML = `${totalFunc} Funcionários`
+    }
+    else {
+        totalFunctotal.innerHTML = `${totalFunc} Funcionário`
+    }
+
+    if (funcVenda > 1) {
+        totalFuncVenda.innerHTML = `${funcVenda} Funcionários`
+    }
+    else {
+        totalFuncVenda.innerHTML = `${funcVenda} Funcionário`
+    }
+
+    if (funcAdmin > 1) {
+        totalFuncAdmin.innerHTML = `${funcAdmin} Funcionários`
+    }
+    else {
+        totalFuncAdmin.innerHTML = `${funcAdmin} Funcionário`
+    }
 }
 
 // Função filtrarFuncionarios refatorada
